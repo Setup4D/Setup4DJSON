@@ -11,9 +11,9 @@
 
 # Setup4DJSON
 
-[![Lazarus Supported Versions](https://img.shields.io/badge/Lazarus%20Supported%20Versions-2.2.6-blue.svg)](https://github.com/Setup4D/Setup4DUtility)
-[![Delphi Supported Versions](https://img.shields.io/badge/Delphi%20Supported%20Versions-XE3..11-blue.svg)](https://github.com/Setup4D/Setup4DUtility)
-[![Platforms](https://img.shields.io/badge/Supported%20platforms-Win32%20and%20Win64-red.svg)](https://github.com/Setup4D/Setup4DUtility) 
+[![Lazarus Supported Versions](https://img.shields.io/badge/Lazarus%20Supported%20Versions-2.2.6-blue.svg)](https://github.com/Setup4D/Setup4DJSON)
+[![Delphi Supported Versions](https://img.shields.io/badge/Delphi%20Supported%20Versions-XE3..11-blue.svg)](https://github.com/Setup4D/Setup4DJSON)
+[![Platforms](https://img.shields.io/badge/Supported%20platforms-Win32%20and%20Win64-red.svg)](https://github.com/Setup4D/Setup4DJSON) 
 
 Bem-vindo(a) ao repositório do projeto Setup4DJSON! Esta aplicação foi desenvolvida para simplificar o uso de outros componentes em seus projetos. Ele fornece uma série de recursos convenientes para otimizar o desenvolvimento de aplicativos. Com o Setup4DJSON, você pode realizar interações com outros procedimentos e funções em suas aplicações Delphi de maneira rápida, simples e confiável. 
 
