@@ -47,6 +47,11 @@ If you have more sections or specific parts of the document you'd like me to tra
 
             ```
             .\{Folder}\src
+            .\{Folder}\src\Object
+            .\{Folder}\src\Interfaces
+            .\{Folder}\src\inc
+            .\{Folder}\src\Constantes
+            .\{Folder}\src\Array
             ```
 
 ### ⚙️ Dependencies
