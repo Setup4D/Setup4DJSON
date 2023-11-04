@@ -46,7 +46,11 @@ boss install github.com/Setup4D/Setup4DJSON
          + Isso permitirá que seu projeto tenha acesso aos arquivos e recursos necessários do Setup4DJSON. Certifique-se de salvar as configurações após seguir esses passos.
 
             ```
-            .\{Pasta}\src
+            .\{Folder}\src\Object
+            .\{Folder}\src\Interfaces
+            .\{Folder}\src\inc
+            .\{Folder}\src\Constantes
+            .\{Folder}\src\Array
             
             ```
 ### ⚙️ Dependências
