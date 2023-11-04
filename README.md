@@ -13,163 +13,166 @@
 [![Delphi Supported Versions](https://img.shields.io/badge/Delphi%20Supported%20Versions-XE3..11-blue.svg)](https://github.com/Setup4D/Setup4DUtility)
 [![Platforms](https://img.shields.io/badge/Supported%20platforms-Win32%20and%20Win64-red.svg)](https://github.com/Setup4D/Setup4DUtility) 
 
-Bem-vindo(a) ao repositório do projeto Setup4DJSON! Esta aplicação foi desenvolvida para simplificar o uso de outros componentes em seus projetos. Ele fornece uma série de recursos convenientes para otimizar o desenvolvimento de aplicativos. Com o Setup4DJSON, você pode realizar interações com outros procedimentos e funções em suas aplicações Delphi de maneira rápida, simples e confiável. 
+Welcome to the Setup4DJSON project repository! This application was developed to simplify the use of other components in your projects. It provides a range of convenient features to streamline application development. With Setup4DJSON, you can quickly, simply, and reliably interact with other procedures and functions in your Delphi applications.
 
-## 📐 Como utilizar
+## 📐 How to Use
 
-### ⚙️ Instalação
+### ⚙️ Installation
 
-#### ⚡️ Automática (via boss)
+#### ⚡️ Automatic (via Boss)
 
-* `[Optional]` Para facilitar recomendo utilizar [**Boss**](https://github.com/HashLoad/boss) (Dependency Manager for Delphi) para instalação, bastando apenas rodar o comando abaixo em um terminal  (Windows PowerShell for example):
+* `[Optional]` To make it easier, I recommend using [**Boss**](https://github.com/HashLoad/boss) (Dependency Manager for Delphi) for installation. Simply run the command below in a terminal (e.g., Windows PowerShell):
 
 ```
 boss install github.com/Setup4D/Setup4DJSON
 ```
 
+If you have more sections or specific parts of the document you'd like me to translate, please feel free to share them, and I'll continue with the translations.
+
 #### ⚡️ Manual (Delphi)
 
-* Se você optar por realizar a instalação manualmente, siga os passos abaixo:
+* If you choose to install manually, follow the steps below:
 
-   1. Faça o [download](https://github.com/Setup4D/Setup4DJSON/archive/refs/heads/main.zip) do projeto.
-   2. Descompacte o arquivo baixado em uma pasta de sua escolha.
-   3. Adicione a pasta extraída ao seu projeto, seguindo os passos abaixo:
-   
-      1. No Delphi, acesse o menu "Project" (Projeto).
-      2. Selecione "Options" (Opções).
-      3. No painel de opções, vá para "Resource Compiler" (Compilador de Recursos).
-      4. Em "Directories and Conditionals" (Diretórios e Condicional), escolha "Include file search path" (Caminho de busca de arquivos de inclusão).
-      5. Clique em "Browse" (Navegar) e adicione a pasta extraída do projeto.
-   
-         + Isso permitirá que seu projeto tenha acesso aos arquivos e recursos necessários do Setup4DJSON. Certifique-se de salvar as configurações após seguir esses passos.
+   1. Download the project from [here](https://github.com/Setup4D/Setup4DJSON/archive/refs/heads/main.zip).
+   2. Unzip the downloaded file to a folder of your choice.
+   3. Add the extracted folder to your project by following these steps:
+
+      1. In Delphi, access the "Project" menu.
+      2. Select "Options."
+      3. In the options panel, go to "Resource Compiler."
+      4. Under "Directories and Conditionals," choose "Include file search path."
+      5. Click "Browse" and add the extracted project folder.
+
+         + This will enable your project to access the necessary files and resources of Setup4DJSON. Make sure to save the settings after following these steps.
 
             ```
-            .\{Pasta}\src
-            
+            .\{Folder}\src
             ```
-### ⚙️ Dependências
 
-* Este projeto depende do [**Setup4DUtility**](https://github.com/Setup4D/Setup4DUtility), desempenhando um papel crucial em suas funcionalidades operacionais. Quando você utiliza o [**Boss**](https://github.com/HashLoad/boss) como instalador do framework, a instalação do **Setup4DUtility** ocorre automaticamente. No entanto, se optar por uma instalação manual, siga os passos abaixo:
+### ⚙️ Dependencies
 
-   1. Faça o [**download**](https://github.com/Setup4D/Setup4DUtility/archive/refs/heads/main.zip) do projeto ou acesse a  [**pagina do projeto**](https://github.com/Setup4D/Setup4DUtility) e realize o download.
-   2. Descompacte o arquivo baixado em uma pasta de sua escolha.
-   3. Adicione a pasta extraída ao seu projeto, indo para *Project > Options > Resource Compiler > Directories and Conditionals > Include file search path*.<p>      
-   
+* This project depends on [**Setup4DUtility**](https://github.com/Setup4D/Setup4DUtility), playing a crucial role in its operational functionalities. When using [**Boss**](https://github.com/HashLoad/boss) as the framework installer, the installation of **Setup4DUtility** occurs automatically. However, if you choose a manual installation, follow the steps below:
+
+   1. Download the project from [**here**](https://github.com/Setup4D/Setup4DUtility/archive/refs/heads/main.zip) or visit the [**project page**](https://github.com/Setup4D/Setup4DUtility) and download it.
+   2. Unzip the downloaded file to a folder of your choice.
+   3. Add the extracted folder to your project by going to *Project > Options > Resource Compiler > Directories and Conditionals > Include file search path*.
+
    ```
-   ./{Pasta}/src
+   ./{Folder}/src
    ```
+If you have more sections or specific parts of the document you'd like me to translate, please feel free to share them, and I'll continue with the translations.
 
-## 📐 Modo de uso
+## 📐 How to Use
 
-### ⚙️ Idioma das mensagens
+### ⚙️ Language Settings
 
-* O sistema oferece suporte a dois idiomas, com o inglês sendo o idioma padrão. No entanto, é possível utilizar o aplicativo em português do Brasil. Para fazer isso, siga as etapas abaixo:
+* The system supports two languages, with English as the default language. However, you can use the application in Brazilian Portuguese. To do so, follow these steps:
 
-   * **Opção 1: Configuração via Delphi:**
+   * **Option 1: Configuration via Delphi:**
    
       ```
-      Acesse Project > Options > Delphi Compiler > Conditionals Defines
+      Access Project > Options > Delphi Compiler > Conditionals Defines
       ```
 
-      1. No Delphi, acesse o menu "Project" (Projeto).
-      2. Selecione "Options" (Opções).
-      3. No painel de opções, vá para "Delphi Compiler" (Compilador Delphi).
-      4. Em "Conditionals Defines" (Definições Condicionais), adicione a diretiva *HAS_PORTUGUES*.
+      1. In Delphi, access the "Project" menu.
+      2. Select "Options."
+      3. In the options panel, go to "Delphi Compiler."
+      4. Under "Conditionals Defines," add the directive *HAS_PORTUGUES*.
 
-         + Isso permitirá que o aplicativo seja utilizado em português do Brasil. Lembre-se de salvar as configurações e recompilar o projeto após fazer essas alterações.
+         + This will allow the application to be used in Brazilian Portuguese. Remember to save the settings and recompile the project after making these changes.
 
-   * **Opção 2: Configuração manual:**
+   * **Option 2: Manual Configuration:**
 
-      1. Certifique-se de que a linha *{$DEFINE HAS_PORTUGUES}* no arquivo *Setup4DCEPLanguage.inc*, localizado em *.\{pasta}\src\requires\inc*, esteja descomentada (ou seja, sem as barras duplas "//").
+      1. Ensure that the line *{$DEFINE HAS_PORTUGUES}* in the file *Setup4DCEPLanguage.inc*, located in *.\{folder}\src\requires\inc*, is uncommented (i.e., without double slashes "//").
 
-         + Isso também permitirá que o aplicativo seja utilizado em português do Brasil. Não se esqueça de salvar as alterações e recompilar o projeto para que as configurações tenham efeito.
+         + This will also allow the application to be used in Brazilian Portuguese. Don't forget to save the changes and recompile the project for the settings to take effect.
 
-## 📐 Funções do TSetup4DJSON
+## 📐 TSetup4DJSON Functions
 
-* A classe TSetup4DJSON desempenha um papel crucial no suporte às funcionalidades do framework. Ela concentra uma variedade de funções e procedimentos que serão utilizados pelo framework, tornando a programação mais dinâmica e simplificada. Além disso, está alinhada com a agilidade da programação inline no ambiente Delphi.
+* The TSetup4DJSON class plays a crucial role in supporting the framework's functionalities. It encapsulates a variety of functions and procedures that will be used by the framework, making programming more dynamic and streamlined. Furthermore, it aligns with the inline programming agility in the Delphi environment.
 
-### ⚙️ Interfaces do Setup4DJSON
+### ⚙️ Setup4DJSON Interfaces
 
 #### 💻 `ISetup4DJSON`
 
-* E A principal interface do framework Setup4DJSON é o ponto de entrada para acessar funcionalidades relacionadas a objetos ou arrays JSON. Esta interface representa o núcleo do framework, com todas as outras interfaces dependentes dela. Ao utilizar essa interface principal, você pode acessar as demais funcionalidades do framework de maneira organizada e simplificada. Essa abordagem foi desenvolvida para reduzir a complexidade e permitir que os desenvolvedores explorem as funcionalidades de maneira flexível e adaptativa.
+* The main interface of the Setup4DJSON framework is the entry point for accessing JSON object or array-related functionalities. This interface represents the core of the framework, with all other interfaces depending on it. By using this main interface, you can access other framework functionalities in an organized and simplified manner. This approach was developed to reduce complexity and allow developers to explore the functionalities flexibly and adaptively.
 
 #### 💻 `ISetup4DJSONObject`
 
-* Essa interface estende a interface [ISetup4DJSON](#-isetup4djson), fornecendo métodos específicos para configurações relacionadas a objetos JSON.
+* This interface extends the [ISetup4DJSON](#-isetup4djson) interface, providing specific methods for JSON object-related configurations.
 
 #### 💻 `ISetup4DJSONArray`
 
-* Esta interface também estende a interface [ISetup4DJSON](#-isetup4djson), porém, oferece métodos específicos para configurações relacionadas a arrays JSON.
-  
-### ⚙️ Métodos TSetup4DJSON
+* This interface also extends the [ISetup4DJSON](#-isetup4djson) interface, but offers specific methods for JSON array-related configurations.
 
-- Esta função implementa a interface  [ISetup4DJSON](#-isetup4djson) juntamente com todas as dependências necessárias. Ela abrange informações essenciais para configurar e ler objetos JSON ou arrays JSON.
-  
+### ⚙️ TSetup4DJSON Methods
+
+- This function implements the [ISetup4DJSON](#-isetup4djson) interface along with all necessary dependencies. It covers essential information for configuring and reading JSON objects or JSON arrays.
+
 #### 💻 `class function New: ISetup4DJSON;`
 
-- Este é um método de classe, o que permite chamá-lo diretamente na classe, sem a necessidade de criar uma instância da mesma. Ele retorna um tipo que implementa a interface  [ISetup4DJSON](#-isetup4djson), indicando que o método cria e retorna uma instância da classe que implementa essa interface. O método cria uma nova instância da própria classe  [ISetup4DJSON](#-isetup4djson) usando o construtor, o que implica que o método `New` retorna uma nova instância de  [ISetup4DJSON](#-isetup4djson). Esse padrão é usado para criar novas instâncias de classes sem a necessidade de criar uma instância manualmente, simplificando a criação de objetos. A função `New` é uma maneira conveniente de instanciar essa classe.
+- This is a class method, allowing it to be called directly on the class without needing to create an instance of it. It returns a type that implements the [ISetup4DJSON](#-isetup4djson) interface, indicating that the method creates and returns an instance of the class implementing this interface. The method creates a new instance of the [ISetup4DJSON](#-isetup4djson) class itself using the constructor, implying that the `New` method returns a new instance of [ISetup4DJSON](#-isetup4djson). This pattern is used to create new instances of classes without the need to manually create an instance, simplifying object creation. The `New` function is a convenient way to instantiate this class.
 
 #### 🧬 `function JSONObject : ISetup4DJSONObject;`
 
-- Este método fornece uma instância que implementa a interface [ISetup4DJSONObject](#-isetup4djsonobject), permitindo o acesso às funções de  [ISetup4DJSONObject](#-isetup4djsonobject). É importante ressaltar que um construtor está disponível para garantir a reutilização do mesmo objeto de configuração ao longo da execução do [TSetup4DJSON](#-funções-do-tsetup4djson)., eliminando a necessidade de criar instâncias adicionais. Isso contribui para uma gestão eficiente e reduz a complexidade no desenvolvimento.4
+- This method provides an instance that implements the [ISetup4DJSONObject](#-isetup4djsonobject) interface, allowing access to the functions of [ISetup4DJSONObject](#-isetup4djsonobject). It's important to note that a constructor is available to ensure the reuse of the same configuration object throughout the execution of [TSetup4DJSON](#-tsetup4djson-functions), eliminating the need to create additional instances. This contributes to efficient management and reduces complexity in development.
 
   1. `function SetJSONObject: ISetup4DJSONObject; overload;`
 
-      - Este método cria um novo objeto JSON e o associa à instância da classe, substituindo qualquer objeto JSON existente. Isso possibilita a configuração de um novo objeto JSON para uso futuro.
+      - This method creates a new JSON object and associates it with the class instance, replacing any existing JSON object. This enables the configuration of a new JSON object for future use.
         
   2. `function GetMessageToJSON(const AValue: String): String;`
 
-      - Este método converte uma string para o formato JSON, semelhante ao exemplo `{"mensagem": AValue}`. A variável `AValue` é um marcador para o valor que você deseja incorporar na mensagem JSON. Portanto, após a conversão, a mensagem terá o valor que você especificar em `AValue` dentro do campo "mensagem" do objeto JSON resultante.
+      - This method converts a string to JSON format, similar to the example `{"message": AValue}`. The variable `AValue` serves as a placeholder for the value you want to embed in the JSON message. Therefore, after the conversion, the message will have the value you specify in `AValue` within the "message" field of the resulting JSON object.
         
-  3. `function ToParseJSONObject(AValue: string): ISetup4DJSONObject; overload;;`
+  3. `function ToParseJSONObject(AValue: string): ISetup4DJSONObject; overload;`
 
-      - Este método converte uma string no formato JSON em um objeto `TJSONObject`, permitindo que você manipule os dados do JSON como um objeto dentro do ambiente.
+      - This method converts a string in JSON format into a `TJSONObject` object, allowing you to manipulate JSON data as an object within the environment.
         
-  4. `function ToParseJSONObject(AValue: TJSONObject): ISetup4DJSONObject; overload;  `
+  4. `function ToParseJSONObject(AValue: TJSONObject): ISetup4DJSONObject; overload;`
 
-      - Esse método permite carregar um objeto JSON externo na instância da classe, possibilitando a manipulação desse objeto JSON dentro do contexto da classe. Isso permite que você trabalhe com o objeto JSON dentro das funcionalidades oferecidas pela classe, tornando mais fácil a manipulação e processamento de dados JSON.
+      - This method allows you to load an external JSON object into the class instance, enabling manipulation of that JSON object within the context of the class. This lets you work with the JSON object within the class's provided functionalities, making it easier to handle and process JSON data.
         
   5. `function ReleaseJSONObject: ISetup4DJSONObject;`
 
-      - Esse método libera o objeto da memória, efetivamente liberando os recursos ocupados por esse objeto e permitindo que a memória seja recuperada pelo sistema. Isso é útil para evitar vazamento de memória e manter o uso eficiente dos recursos do sistema.
+      - This method releases the object from memory, effectively freeing the resources occupied by this object and allowing the memory to be reclaimed by the system. This is useful to prevent memory leaks and maintain efficient system resource usage.
         
   6. `function AddPair(const AKey: string; const AValue: string): ISetup4DJSONObject; overload;`
 
-      - Este método adiciona um par de chave e valor a um objeto JSON, permitindo que você insira informações no objeto no formato chave-valor. Isso é uma operação comum para a construção e manipulação de objetos JSON em Delphi.
+      - This method adds a key-value pair to a JSON object, allowing you to insert information in key-value format. This is a common operation for constructing and manipulating JSON objects in Delphi.
         
   7. `function TryGetValue(const AKey: string): string; overload;`
 
-      - Esse método tenta obter o valor associado à chave especificada de um objeto JSON. Ele permite que você acesse o valor correspondente a uma determinada chave no objeto JSON, facilitando a recuperação de informações específicas do JSON.
+      - This method attempts to retrieve the value associated with the specified key from a JSON object. It allows you to access the value corresponding to a specific key in the JSON object, making it easier to retrieve specific JSON information.
         
   8. `function TryGetValue(const AKey: string; AValue : Integer): Integer; overload;`
 
-      - Esse método tenta obter o valor associado a uma chave em um objeto JSON. Se a chave não for encontrada ou se o valor não for um número, o método retornará o valor padrão especificado em `AValue`. Essa abordagem é útil para lidar com casos em que a chave pode não existir no JSON ou quando o valor associado à chave não é do tipo numérico. O valor padrão em `AValue` é retornado como uma alternativa caso a busca não seja bem-sucedida.
+      - This method attempts to obtain the value associated with a key in a JSON object. If the key is not found or the value is not a number, the method will return the default value specified in `AValue`. This approach is useful for handling cases where the key may not exist in the JSON or when the value associated with the key is not of a numeric type. The default value in `AValue` is returned as an alternative in case the search is unsuccessful.
         
   9. `function AsJSONObject: TJSONObject;`
 
-      - Esse método retorna o objeto JSON associado à instância da classe. Isso permite acessar e manipular o objeto JSON diretamente por meio da instância da classe em que o método é chamado.
+      - This method returns the JSON object associated with the class instance. This allows direct access and manipulation of the JSON object through the class instance in which the method is called.
         
   10. `function AsJSONString: String;`
 
-      - Esse método retorna uma representação em formato de string do objeto JSON associado à instância. Isso permite obter uma representação textual do JSON, o que pode ser útil para salvar ou enviar dados JSON em formato de texto.
+      - This method returns a string representation of the JSON object associated with the instance. This allows you to obtain a textual representation of the JSON, which can be useful for saving or sending JSON data in text format.
         
   11. `function IsJSONValid(const AValue: string): Boolean;`
 
-      - Este método verifica se uma determinada string representa um JSON válido. Ele pode ser usado para validar se uma string segue a sintaxe correta de JSON. Se a string não for um JSON válido, o método retornará um resultado que indica que a string não atende aos critérios de formatação do JSON. Isso é útil para garantir a integridade dos dados JSON antes de processá-los.
+      - This method checks if a given string represents valid JSON. It can be used to validate if a string follows the correct JSON syntax. If the string is not valid JSON, the method will return a result indicating that the string doesn't meet the JSON formatting criteria. This is useful for ensuring the integrity of JSON data before processing it.
         
   12. `function IsNotJSONValid(const AValue: string): Boolean;`
 
-      - Este método verifica se uma determinada string não representa um JSON válido. Ele pode ser usado para identificar se uma string não está em conformidade com a sintaxe correta de JSON. Se a string não for um JSON válido, o método retornará um resultado indicando que a string não atende aos critérios de formatação do JSON. Isso é útil para identificar erros de formatação ou problemas nos dados JSON.
+      - This method checks if a given string does not represent valid JSON. It can be used to identify if a string does not comply with the correct JSON syntax. If the string is not valid JSON, the method will return a result indicating that the string doesn't meet the JSON formatting criteria. This is useful for identifying formatting errors or issues in JSON data.
         
   14. `function Finish: ISetup4DJSON;`
   
-      - Este método fornece uma instância que implementa a interface [ISetup4DJSON](#-isetup4djson). É utilizado para concluir a execução e obter uma referência à instância principal de [TSetup4DJSON](#-funções-do-tsetup4djson). Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
+      - This method provides an instance that implements the [ISetup4DJSON](#-isetup4djson) interface. It's used to conclude execution and obtain a reference to the main [TSetup4DJSON](#-tsetup4djson-functions) instance. Therefore, this line simply returns a reference to the invoking instance.
 
 #### 🧬 `function JSONArray : ISetup4DJSONArray;`
 
-- Este método fornece uma instância que implementa a interface [ISetup4DJSONArray](#-isetup4djsonarray), permitindo o acesso às funções de  [ISetup4DJSONArray](#-isetup4djsonarray). É importante ressaltar que um construtor está disponível para garantir a reutilização do mesmo objeto de configuração ao longo da execução do [TSetup4DJSON](#-funções-do-tsetup4djson), eliminan   do a necessidade de criar instâncias adicionais. Isso contribui para uma gestão eficiente e reduz a complexidade no desenvolvimento.
+- This method provides an instance that implements the [ISetup4DJSONArray](#-isetup4djsonarray) interface, allowing access to the functions of [ISetup4DJSONArray](#-isetup4djsonarray). It's important to note that a constructor is available to ensure the reuse of the same configuration object throughout the execution of [TSetup4DJSON](#-tsetup4djson-functions), eliminating the need to create additional instances. This contributes to efficient management and reduces complexity in development.
 
   1. `function Finish: ISetup4DJSON;`
-      - Este método fornece uma instância que implementa a interface [ISetup4DJSON](#-isetup4djson). É utilizado para concluir a execução e obter uma referência à instância principal de [TSetup4DJSON](#-funções-do-tsetup4djson). Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
 
+      - This method provides an instance that implements the [ISetup4DJSON](#-isetup4djson) interface. It's used to conclude execution and obtain a reference to the main [TSetup4DJSON](#-tsetup4djson-functions) instance. Therefore, this line simply returns a reference to the invoking instance.
