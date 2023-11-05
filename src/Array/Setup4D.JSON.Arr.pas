@@ -8,7 +8,7 @@ uses
 type
   TSetup4DJSONArray = class(TInterfacedObject, ISetup4DJSONArray)
   private
-    [weak]
+    {$IF NOT DEFINED(FPC)}[weak]{$ENDIF}
     FParent : ISetup4DJSON;
   protected
 
