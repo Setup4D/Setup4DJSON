@@ -1,10 +1,12 @@
 unit Setup4D.JSON.Interf;
 
+
 {$IF DEFINED(FPC)}
   {$mode Delphi}
+{$ELSE}
+  {$I Setup4DJSONLanguage.inc}
 {$ENDIF}
 
-  {$I Setup4DJSONLanguage.inc}
 
 
 interface

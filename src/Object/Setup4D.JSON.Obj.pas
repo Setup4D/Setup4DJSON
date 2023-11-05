@@ -21,7 +21,7 @@ uses
 type
   TSetup4DJSONObject = class(TInterfacedObject, ISetup4DJSONObject)
   private
-    [weak]
+    {$IF NOT DEFINED(FPC)}[weak]{$ENDIF}
     FParent : ISetup4DJSON;
     FJSON : TJSONObject;
   protected
