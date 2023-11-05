@@ -1,0 +1,14 @@
+{
+	"hash": "",
+	"updated": "2023-11-03T23:39:24.9864756-03:00",
+	"installedModules": {
+		"https://github.com/setup4d/setup4dutility": {
+			"name": "setup4dutility",
+			"version": "1.0.3",
+			"hash": "be6a943e99d2a8fda34d8fec92b3a10c",
+			"artifacts": {},
+			"failed": false,
+			"changed": false
+		}
+	}
+}

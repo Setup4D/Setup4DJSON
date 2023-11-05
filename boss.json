@@ -1,0 +1,11 @@
+{
+	"name": "Setup4DJSON",
+	"description": "In English - This Delphi framework simplifies the task of JSON object manipulation, making it faster and more efficient. Em Português - Este framework em Delphi simplifica a tarefa de manipulação de objetos JSON, tornando-a mais rápida e eficiente.",
+	"version": "1.0.1",
+	"homepage": "www.setup4d.com.br",
+	"mainsrc": "./src",
+	"projects": [],
+	"dependencies": {
+		"https://github.com/setup4d/setup4dutility": "^1.0.3"
+	}
+}
