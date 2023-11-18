@@ -1,4 +1,4 @@
-unit Setup4D.JSON.Arr;
+﻿unit Setup4D.JSON.Arr;
 
 interface
 

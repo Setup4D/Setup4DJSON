@@ -1,4 +1,4 @@
-unit Setup4D.JSON.Obj;
+﻿unit Setup4D.JSON.Obj;
 
 interface
 
@@ -19,12 +19,18 @@ uses
   Setup4D.JSON.Interf;
 
 type
+
+  { TSetup4DJSONObject }
+
   TSetup4DJSONObject = class(TInterfacedObject, ISetup4DJSONObject)
   private
     {$IF NOT DEFINED(FPC)}[weak]{$ENDIF}
     FParent : ISetup4DJSON;
     FJSON : TJSONObject;
+    FOwner : Boolean;
   protected
+    function Owner : ISetup4DJSONObject;
+    function NotOwner : ISetup4DJSONObject;
 
     function SetJSONObject: ISetup4DJSONObject; overload;
     function GetMessageToJSON(const AValue: String): String;
@@ -38,6 +44,7 @@ type
 
     function TryGetValue(const AKey: string): string; overload;
     function TryGetValue(const AKey: string; AValue : Integer): Integer; overload;
+    function TryGetValue(const AKey: string; AValue : Double): Double; overload;
 
     function AsJSONObject: TJSONObject;
     function AsJSONString: String;
@@ -65,8 +72,8 @@ begin
   SetJSONObject;
 end;
 
-function TSetup4DJSONObject.AddPair(const AKey,
-  AValue: string): ISetup4DJSONObject;
+function TSetup4DJSONObject.AddPair(const AKey: string;
+  const AValue: string): ISetup4DJSONObject;
 begin
   Result:= Self;
   FJSON.
@@ -95,7 +102,8 @@ end;
 
 destructor TSetup4DJSONObject.Destroy;
 begin
-  ReleaseJSONObject;
+  if FOwner then
+    ReleaseJSONObject;
 
   inherited;
 end;
@@ -165,6 +173,18 @@ begin
 {$ENDIF}
 end;
 
+function TSetup4DJSONObject.Owner: ISetup4DJSONObject;
+begin
+  Result := Self;
+  FOwner := True;
+end;
+
+function TSetup4DJSONObject.NotOwner: ISetup4DJSONObject;
+begin
+  Result := Self;
+  FOwner := False;
+end;
+
 function TSetup4DJSONObject.SetJSONObject: ISetup4DJSONObject;
 begin
   Result := Self;
@@ -172,6 +192,7 @@ begin
   ReleaseJSONObject;
 
   FJSON := TJSONObject.Create;
+  FOwner := True;
 end;
 
 function TSetup4DJSONObject.ToParseJSONObject(
@@ -196,6 +217,23 @@ function TSetup4DJSONObject.ToParseJSONObject(
 begin
   Result:= Self;
   FJSON:= AValue;
+end;
+
+function TSetup4DJSONObject.TryGetValue(const AKey: string;
+  AValue: Double): Double;
+{$IF DEFINED(FPC)}
+var
+  LField   : TJSONData;
+{$ENDIF}
+begin
+  Result:= AValue;
+{$IF DEFINED(FPC)}
+  LField:= FJSON.FindPath(AKey);
+  if Assigned(LField) and (LField.JSONType = jtNumber) then
+    Result := LField.AsFloat;
+{$ELSE}
+  FJSON.TryGetValue<Double>(AKey, Result);
+{$ENDIF}
 end;
 
 function TSetup4DJSONObject.TryGetValue(const AKey: string;

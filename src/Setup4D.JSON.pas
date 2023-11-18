@@ -1,4 +1,4 @@
-unit Setup4D.JSON;
+﻿unit Setup4D.JSON;
 
 interface
 

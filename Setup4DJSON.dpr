@@ -1,4 +1,4 @@
-program Setup4DJSON;
+﻿program Setup4DJSON;
 
 {$APPTYPE CONSOLE}
 
