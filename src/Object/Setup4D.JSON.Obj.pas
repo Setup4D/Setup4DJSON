@@ -41,6 +41,7 @@ type
     function ReleaseJSONObject: ISetup4DJSONObject;
 
     function AddPair(const AKey: string; const AValue: string): ISetup4DJSONObject; overload;
+    function AddPair(const AKey: string; const AValue: TJSONObject): ISetup4DJSONObject; overload;
 
     function TryGetValue(const AKey: string): string; overload;
     function TryGetValue(const AKey: string; AValue : Integer): Integer; overload;
@@ -79,6 +80,18 @@ begin
   FJSON.
 {$IF DEFINED(FPC)}
      Add(AKey, TJSONStringType(AValue))
+{$Else}
+     AddPair(AKey, AValue)
+{$ENDIF};
+end;
+
+function TSetup4DJSONObject.AddPair(const AKey: string;
+  const AValue: TJSONObject): ISetup4DJSONObject;
+begin
+  Result:= Self;
+  FJSON.
+{$IF DEFINED(FPC)}
+     Add(AKey, TJSONObject(AValue))
 {$Else}
      AddPair(AKey, AValue)
 {$ENDIF};

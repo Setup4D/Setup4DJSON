@@ -330,6 +330,41 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
+    /// Adiciona um par de chave e valor ao objeto JSON.
+    /// </summary>
+    /// <param name="AKey">A chave do par.</param>
+    /// <param name="AValue">O valor do par.</param>
+    /// <returns>
+    ///   Retorna uma referência para o objeto que implementa a interface ISetup4DJSONObject,
+    ///   permitindo encadeamento de chamadas.
+    /// </returns>
+    /// <remarks>
+    ///   Esta função tem o intuito de adicionar um par de chave e valor ao objeto JSON.
+    ///   A chave é fornecida como parâmetro "AKey" e o valor como parâmetro "AValue".
+    ///   Após adicionar o par, a função retorna uma referência para o objeto JSON,
+    ///   permitindo encadeamento de chamadas de métodos subsequentes.
+    /// </remarks>
+    {$ELSE}
+    /// <summary>
+    /// Adds a key-value pair to the JSON object.
+    /// </summary>
+    /// <param name="AKey">The key of the pair.</param>
+    /// <param name="AValue">The value of the pair.</param>
+    /// <returns>
+    ///   Returns a reference to the object implementing the ISetup4DJSONObject interface,
+    ///   allowing method chaining.
+    /// </returns>
+    /// <remarks>
+    ///   This function is intended to add a key-value pair to the JSON object.
+    ///   The key is provided as the "AKey" parameter, and the value is provided as the "AValue" parameter.
+    ///   After adding the pair, the function returns a reference to the JSON object,
+    ///   allowing method chaining for subsequent calls.
+    /// </remarks>
+    {$ENDIF}
+    function AddPair(const AKey: string; const AValue: TJSONObject): ISetup4DJSONObject; overload;
+
+    {$IFDEF HAS_PORTUGUES}
+    /// <summary>
     /// Tenta obter o valor associado à chave especificada do objeto JSON.
     /// </summary>
     /// <param name="AKey">A chave do valor a ser obtido.</param>
