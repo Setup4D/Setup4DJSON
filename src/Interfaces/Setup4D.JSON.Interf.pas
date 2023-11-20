@@ -13,9 +13,11 @@ interface
 uses
 {$IF DEFINED(FPC)}
   jsonparser,
-  fpjson
+  fpjson,
+  Classes
 {$Else}
-  System.JSON
+  System.JSON,
+  System.Classes
 {$ENDIF}
   ;
 type
@@ -269,6 +271,54 @@ type
     /// </remarks>
     {$ENDIF}
     function ToParseJSONObject(AValue: TJSONObject): ISetup4DJSONObject; overload;
+
+    {$IFDEF FPC}
+    {$IFDEF HAS_PORTUGUES}
+    /// <summary>
+    /// Instancia um objeto TJSONObject no objeto que implementa a interface ISetup4DJSONObject,
+    /// representando o conteúdo do fluxo de dados (stream) fornecido.
+    /// </summary>
+    /// <param name="AValue">O fluxo de dados (stream) contendo o conteúdo JSON.</param>
+    /// <returns>
+    /// Retorna uma instância do objeto que implementa a interface ISetup4DJSONObject,
+    /// representando o conteúdo do fluxo de dados (stream) fornecido.
+    /// </returns>
+    {$ELSE}
+    /// <summary>
+    /// Instantiates a TJSONObject object within the object implementing the ISetup4DJSONObject interface,
+    /// representing the content of the provided data stream.
+    /// </summary>
+    /// <param name="AValue">The data stream containing the JSON content.</param>
+    /// <returns>
+    /// Returns an instance of the object implementing the ISetup4DJSONObject interface,
+    /// representing the content of the provided data stream.
+    /// </returns>
+    {$ENDIF}
+    function ToParseJSONObject(AValue: TJSONData): ISetup4DJSONObject; overload;
+    {$ENDIF}
+
+    {$IFDEF HAS_PORTUGUES}
+    /// <summary>
+    /// Instancia um objeto TJSONObject no objeto que implementa a interface ISetup4DJSONObject,
+    /// representando o conteúdo do fluxo de dados (stream) fornecido.
+    /// </summary>
+    /// <param name="AValue">O fluxo de dados (stream) contendo o conteúdo JSON.</param>
+    /// <returns>
+    /// Retorna uma instância do objeto que implementa a interface ISetup4DJSONObject,
+    /// representando o conteúdo do fluxo de dados (stream) fornecido.
+    /// </returns>
+    {$ELSE}
+    /// <summary>
+    /// Instantiates a TJSONObject object within the object implementing the ISetup4DJSONObject interface,
+    /// representing the content of the provided data stream.
+    /// </summary>
+    /// <param name="AValue">The data stream containing the JSON content.</param>
+    /// <returns>
+    /// Returns an instance of the object implementing the ISetup4DJSONObject interface,
+    /// representing the content of the provided data stream.
+    /// </returns>
+    {$ENDIF}
+    function ToParseJSONObject(AValue: TStream): ISetup4DJSONObject; overload;
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>

@@ -10,10 +10,12 @@ uses
   fpjson,
   jsonparser,
   SysUtils,
+  Classes,
 {$ELSE}
   REST.Json,
   System.JSON,
   System.SysUtils,
+  System.Classes,
 {$ENDIF}
 
   Setup4D.JSON.Interf;
@@ -42,7 +44,11 @@ type
 
     function AddPair(const AKey: string; const AValue: string): ISetup4DJSONObject; overload;
     function AddPair(const AKey: string; const AValue: TJSONObject): ISetup4DJSONObject; overload;
+    function ToParseJSONObject(AValue: TStream): ISetup4DJSONObject; overload;
 
+    {$IFDEF FPC}
+    function ToParseJSONObject(AValue: TJSONData): ISetup4DJSONObject; overload;
+    {$ENDIF}
     function TryGetValue(const AKey: string): string; overload;
     function TryGetValue(const AKey: string; AValue : Integer): Integer; overload;
     function TryGetValue(const AKey: string; AValue : Double): Double; overload;
@@ -232,6 +238,32 @@ begin
   FJSON:= AValue;
 end;
 
+function TSetup4DJSONObject.ToParseJSONObject(
+  AValue: TStream): ISetup4DJSONObject;
+
+begin
+  Result:= Self;
+
+  ReleaseJSONObject;
+
+{$IF DEFINED(FPC)}
+  FJSON:= TJSONObject(GetJSON(AValue));
+{$Else}
+  AValue.Position := 0;
+  var LStringStrem := TStringStream.Create('', TEncoding.UTF8);
+  LStringStrem.CopyFrom(AValue, AValue.Size);
+  FJSON:= TJSONObject.ParseJSONValue(LStringStrem.DataString) as TJSONObject;
+{$ENDIF}
+end;
+
+{$IFDEF FPC}
+function TSetup4DJSONObject.ToParseJSONObject(AValue: TJSONData): ISetup4DJSONObject;
+begin
+  Result:= Self;
+  FJSON:= TJSONObject(AValue);
+end;
+{$ENDIF}
+
 function TSetup4DJSONObject.TryGetValue(const AKey: string;
   AValue: Double): Double;
 {$IF DEFINED(FPC)}
@@ -289,4 +321,10 @@ begin
   Result:= Self.Create;
 end;
 
+initialization
+ {$IFDEF FPC}
+  // Define o CodePage para UTF-8
+  if not (DefaultSystemCodePage = CP_UTF8) then
+    DefaultSystemCodePage := CP_UTF8;
+  {$ENDIF}
 end.
